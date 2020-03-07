@@ -1,0 +1,203 @@
+@import 'normalize.css';
+@import 'reset.css';
+@import url("https://use.typekit.net/ptc3hgq.css");
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Parisienne&display=swap');
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: program, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #012640;
+    line-height: 1.6em;
+    background-color: #fff0e1;
+}
+
+
+a {
+    text-decoration: none;
+    color: #666;
+    vertical-align: baseline;
+}
+
+.container {
+    width: 95%;
+    padding-top:25px;
+    padding-bottom:25px;
+    margin: auto;
+    overflow: auto;
+}
+
+header {
+
+    left: 0;
+    right: 0;
+    background-image:url(../img/hasselt6.jpg);
+    background-size: cover;
+    min-height: 90vh;
+    color: white;
+}
+
+header a {
+    color: #fff;
+}
+
+.logo {
+    float: left;
+    width: 30%;
+    color:white;
+    font-family: 'Pacifico', 'Parisienne' ;
+    font-size:1.2rem;
+    padding:auto;
+}
+
+nav {
+    float: right;
+    width: 70%;
+}
+
+nav ul {
+    float: right;
+}
+
+nav li {
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+    padding: .5em;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1rem;
+}
+
+ nav a:hover {
+    color: #64c5f0;
+    font-style:bold;
+    font-size:1.1rem;
+}
+
+section {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.tagline {
+    background:#64c5f0;
+    color: white;
+    max-height:5vh;
+    
+}
+
+.tagline h1 {
+    text-align: center;
+    font-size: 2.7rem;
+}
+
+.container h1{
+    font-size:1.5rem;
+    letter-spacing: .1em;
+    margin-bottom:25px;
+}
+
+#gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#gallery li {
+    display: block;
+    float: left;
+    width: 23%;
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 12px 7px 0;
+    position: relative;
+}
+
+#gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;
+    font-size: 1rem;
+}
+footer p{
+    padding-bottom:8px;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #ddd;
+    font-style:bold;
+    font-size:1.1rem;
+    list-style: none;
+}
+
+.overlay {
+    display: none;
+    background: grey;
+    color:white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:100;
+    width:100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    pointer-events:none; 
+}
+
+.overlay h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* MEDIA QUERY */
+
+@media(max-width: 768px) { 
+    .logo, nav {
+        float: none;
+        width: 100%;
+        text-align: center
+    }
+
+    nav ul, nav li {
+        float: none;
+        padding: 0;
+    }
+
+    #gallery li {
+        width: 48%;
+        margin-right:8px;
+    }
+}
+
+@media(max-width: 568px) {
+    #gallery li{
+        width: 100%;
+        margin-right: 8px;
+    }
+}
+
+

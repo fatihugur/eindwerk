@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact</title>
+    <link href="css/contact.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="form-content">
+        <p><small>Would you like to work with me</small></p>
+        <h2 class= "keep">Let's keep in touch</h2>
+        <p>Please write your message</p>
+        <form class="email-contact" action="versturen.php" method="POST">
+            <div class="errorboxcontact">
+                <span class="error" id="naam_error"></span>
+                <span class="error" id="email_error"></span>
+                <span class="error" id="textarea_error"></span>
+            </div>
+            <input type="text" required placeholder="Your name">
+            <input type="email" required placeholder="Email adress">
+            <textarea rows="4" cols="" required placeholder="Project description" id="textarea"></textarea>
+            <button class="btn btn-send" onclick="sendFormule()" value="send" type="submit">Send</button>
+        </form>
+        <p class="fine-print">I will never share your information without your permission</p>
+    </div>
+
+    <div class="cv">
+        <h2 class="cvitae">Curriculum vitae</h2>
+            <h2 class="cv-text">EDUCATION</h2>
+            <p>2019 - 2020<br> CVO De Verdieping | Frontend Developer</p>
+            <p>2010 - 2011<br> Fatih University | Master | Management</p>
+            <p>1993 - 1998<br> Anatolia University | Bachelor | Communication Science Management</p>
+            <h2 class="cv-text">EXPERIENCES</h2>
+            <p>2009 - 2016<br> Zaman Newspaper | News Director</p>
+            <p>2005 - 2009<br> Aksiyon- Zaman | Representative - S.Reporter</p>
+            <p>1998 - 2005<br> Cihan News Agency | Photojournalist</p>
+    </div>
+</body>
+</html>
+

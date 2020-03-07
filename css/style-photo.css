@@ -1,0 +1,485 @@
+@import 'normalize.css';
+@import 'reset.css';
+@import url("https://use.typekit.net/ptc3hgq.css");
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Parisienne&display=swap');
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /*https://caniuse.com/#feat=css-scroll-behavior*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    transition: all ease-in-out 300ms;
+}
+
+body {
+    margin: 0;
+    font-family: program, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: #012640;
+    background-color: #fff0e1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 500;
+    text-decoration: none;
+    padding: .5em;
+    text-transform: uppercase;
+    color: #232323;
+    font-size: 1rem;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ddd;
+    font-style:bold;
+    font-size:1.1rem;
+}
+
+/*CONTAINER*/
+
+.container {
+    width: 95%;
+    max-width: 70em;
+    margin: 0 auto;
+    margin-bottom:3em;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+strong {
+    font-weight: 500;
+}
+
+a {
+	color: #64c5f0;
+	text-decoration: none;
+	transition: color .7s;
+}
+
+a:hover, a:focus {
+	color: #ddd;
+}
+
+.logo {
+    border-radius: 5%;
+    opacity:0.8;
+    color:#232323;
+    font-family: 'Pacifico', 'Parisienne' ;
+    font-size:1.2rem;
+}
+
+.logo:hover {
+	animation: scalePulse 2s infinite, colorChange 10s infinite;
+}
+
+ @keyframes scalePulse {
+        0%,
+        100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+    
+    @keyframes colorChange {
+        0%,
+        100% {
+            background: rgba(127, 34, 195, 0.7);
+        }
+        50% {
+            background: rgba(253, 189, 45, 0.7);
+        }
+    }
+
+
+
+
+/* FONT-STYLE */
+
+h1 {
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-top: 0;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+#book p{
+    margin:auto;
+    padding-bottom:30px;
+}
+
+#book h1{
+        margin-top:25px;
+        margin-bottom:20px;
+    }
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+.title span {
+    font-weight: 400;
+    display: block;
+    font-size: .9em;
+}
+
+.title-cta {
+    margin: 0 0 .5em;
+}
+
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.photos h1{
+    margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+/* BUTTON MEDIA QUERY | BUTTON CLASS*/
+
+@media (min-width: 60rem) {
+    .btn {
+        font-size: 1.5rem;
+    }
+}
+
+.btn-small {
+    font-size: .7rem;
+    font-weight: 400;
+    border-width: 1px;
+}
+
+.btn-accent {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    background-color: #64c5f0;
+    border-color: #64c5f0;
+}
+
+.btn-dark {
+    color: #232323;
+    border-color: #232323;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    background-color: #232323;
+    color: #229ac3;
+}
+
+
+/* MAINFOTO- PARALLLAX EFFECT */
+
+.parallax--bg,
+.parallax--box {
+    transition: initial;
+}
+
+
+
+.home-hero {
+    color: #232323;
+    padding: 10em 0;
+    background: linear-gradient(0deg, rgba(127, 34, 195, 0.7) 0%, rgba(253, 189, 45, 0.7) 100%), url(../images/limburg.jpg);
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+.home-about-textbox {
+    background-color: #232323;
+    padding: 4em;
+    width: 100vw;
+    margin-left: -2.5%;
+    outline: 2px solid #64c5f0;
+    outline-offset: -2.5em;
+    color: #fff;
+    opacity:0.6;
+    position: relative;
+}
+
+.home-about-textbox h1 {
+    color: #64c5f0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: .75em;
+    background-color: #232323;
+    padding: 0 .145em;
+}
+
+
+/* PHOTO PORTFOLIO */
+
+.photos {
+    margin: 0;
+    font-size:2.8em;
+    text-transform: uppercase;
+    
+}
+
+.photo {
+    margin: 0;
+    position: relative;
+}
+
+.photo img {
+    display: block;
+    margin:auto;
+}
+
+.photo-description {
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    padding-bottom: 1.2em;
+}
+
+.photo-description p {
+    margin: 1em;
+}
+
+
+/* cta */
+
+.cta {
+    background-color: #64c5f0;
+    padding: 5em 0;
+}
+
+
+
+/* FOOTER */
+
+
+footer {
+    background-color: #232323;
+    color: #fff;
+    text-align: center;
+    padding: 3em 0;
+    font-size: 1rem;
+}
+footer p{
+    padding-bottom:8px;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #ddd;
+    font-style:bold;
+    font-size:1.1rem;
+    list-style: none;
+}
+
+
+/* MEDIA QUERY | FONT-STYLE  */
+
+@media (min-width:60rem){
+    p{
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .title{
+        font-size: 3.7rem;
+    }
+
+/* header*/
+    .logo {
+        float:left;
+    }
+
+    nav{
+        float:right;
+    }
+
+ /* hero */
+
+    .home-hero{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+
+}
+
+
+
+@media (min-width: 25rem){
+    h1{
+        font-size: 2rem;
+    }
+
+    .home-about-textbox{
+        padding: 5.5em;
+    }
+
+    .home-about-textbox h1{
+        top: .6em;
+        padding: 0 .325em;
+    }
+    #book p{
+        font-size:1.4rem;
+    }
+}
+
+@media (min-width: 60rem){
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    .home-about {
+        background-image: url(../images/hasselt2.jpg);
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 10em;
+    }
+
+    .home-about-textbox{
+        width: 50%;
+        padding: 7em;
+        margin-left: -2.5%;
+        top: -5em;
+        text-align: left;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+    }
+    
+    .home-about-textbox h1 {
+        top: .75em;
+        left: 6rem;
+        transform: translateX(0);
+    }
+    #book p{
+        font-size:1.8rem;
+        padding-right:10px;
+        padding-left:10px;
+    }
+}
+
+@media screen and (max-width: 37rem){
+
+    .title{
+
+        margin-top:3em;
+    }
+
+    #book h1{
+        margin-top:20px;
+        margin-bottom:15px;
+    }
+
+    .photo-description p{
+        font-size:1.5rem;
+    }
+
+    #book p{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+
+
+}
+
+/*PORTFOLIO*//*PHOTOS*/
+
+@media (min-width:37rem) {
+    .photo{
+        width:50%;
+        float:left;
+    }
+}
+
+@media (min-width:60rem){
+
+    .photo {
+        width:33.333333%;
+        overflow:hidden;
+    }
+
+    .photo-description {
+        transform:translateY(150%);
+
+    }
+    .photo:hover .photo-description {
+        transform:translateY(0%);
+    }
+}

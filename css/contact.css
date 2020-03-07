@@ -1,0 +1,237 @@
+@import 'normalize.css';
+@import 'reset.css';
+@import url("https://use.typekit.net/ptc3hgq.css");
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Parisienne&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: program, sans-serif;
+    font-size: .8rem;
+    color: #fff;
+    background-color: #64c5f0;
+    text-align: center;
+}
+
+
+/* CONTENT */
+
+.keep {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+}
+
+.keep+p {
+    color: black;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    margin-left:auto;
+}
+
+
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #64c5f0;
+    margin-top: 0;
+    margin-bottom:10px;
+    text-transform: uppercase;
+}
+
+.cv-text {
+    font-size: 0.625rem;
+    margin: 0;
+    padding: 2px;
+    color: #64c5f0;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-top: 5px solid #64c5f0;
+    border-image: linear-gradient(to left, ##1b17d0, #ffa51d) 1;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong {
+    font-weight: 900;
+}
+
+
+/* CIRRICULUM VITEA */
+
+.cv {
+    background-image: url(../img/ribs.jpg);
+    background-color: #404040;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+.cvitae{
+    color: #64c5f0;
+}
+
+/*  FORM CONTENT AND FORM */
+
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-content {
+    padding: 2em 1em;
+}
+
+
+.cv>*,
+.form-content>* {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.email-contact {
+    width: 80%;
+    max-width: 300px;
+}
+
+input, textarea,
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input, textarea {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform 250ms;
+}
+
+input:focus textarea:focus {
+    transform: scale(1.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 1.5em;
+    font-size: 0.625rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-send {
+    display: inline-block;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+
+
+.btn-send:hover,
+.btn-send:focus {
+    background-color: #232323;
+    color: #229ac3;
+}
+
+h2, .form-content p {
+     transition: color 1s;
+}
+
+h2:hover .form-content p:hover {
+     color:orange;
+}
+
+
+/* MEDIA QUERIES */
+
+   @media (min-width: 698px){
+    body {
+        display:flex;
+        font-size: 1.125em;
+    }
+
+    .keep {
+        font-size:2rem;
+    }
+
+    h2, .keep+p {
+        font-size:1.5rem;
+    }
+
+    p {
+        font-size:1.2rem;
+    }
+
+
+    .cv, .form-content{
+        width: 50%;
+        min-height:100vh;
+    }
+    
+    .form-content {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+   }
+
+    @media (min-width: 500px){
+    body {
+        display:flex;
+        font-size: 1rem;
+    }
+    form {
+        margin:30px;
+    }
+
+    h1 {
+        font-size:2rem;
+    }
+
+    h2, .keep+p, .cv-text {
+        font-size:1.2rem;
+        margin-bottom:20px;
+    }
+
+    .keep{
+        margin-bottom:20px;
+    }
+
+    .cvitae {
+        margin-top:30px;
+        font-size:1.5rem;
+    }
+    .cv, .cv p{
+        margin-bottom:15px;
+        font-size: 1rem;
+    }
+    
+   }
